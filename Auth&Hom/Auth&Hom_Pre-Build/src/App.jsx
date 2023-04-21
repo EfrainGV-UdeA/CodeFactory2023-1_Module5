@@ -7,12 +7,10 @@ import Solicitud from "./components/ModHom";
 
 function App() {
   const [auth, setAuth] = useState(false);
-
   return auth ? (
     <>
       <HeaderC showUser={true} />
-      <Solicitud/>
-      <button onClick={() => setAuth(false)}>Volver</button>
+      <Solicitud onUpdateState={setAuth}/>
       <FooterC />
     </>
   ) : (

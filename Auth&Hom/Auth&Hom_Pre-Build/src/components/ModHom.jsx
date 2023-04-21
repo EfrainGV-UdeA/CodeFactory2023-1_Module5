@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import "../Hom.css";
 
-function Solicitud() {
+function SolicitudHom({onUpdateState}) {
   const [nombre, setNombre] = useState("");
   const [cedula, setCedula] = useState("");
   const [facultad, setFacultad] = useState("");
@@ -28,28 +29,53 @@ function Solicitud() {
   };
 
   return (
-    <div>
+    <div className="solicitud-container">
       <div className="solicitud-title">
         <h1>SOLICITUD DE RECONOCIMIENTO Y HOMOLOGACIÓN DE MATERIAS</h1>
       </div>
       <div className="solicitud-form">
+        <h2>DATOS DEL ESTUDIANTE</h2>
         <form onSubmit={handleSubmit}>
-          <label>
-            NOMBRE:
-            <input type="text" value={nombre} onChange={handleNombreChange} />
-          </label>
-          <label>
-            CÉDULA:
-            <input type="text" value={cedula} onChange={handleCedulaChange} />
-          </label>
-          <label>
-            FACULTAD:
-            <input type="text" value={facultad} onChange={handleFacultadChange} />
-          </label>
-          <label>
-            PROGRAMA:
-            <input type="text" value={programa} onChange={handleProgramaChange} />
-          </label>
+          <table>
+            <tbody>
+              <tr>
+                <td>NOMBRE:</td>
+                <td>
+                  <input
+                    type="text"
+                    value={nombre}
+                    onChange={handleNombreChange}
+                  />
+                </td>
+                <td>CÉDULA:</td>
+                <td>
+                  <input
+                    type="number"
+                    value={cedula}
+                    onChange={handleCedulaChange}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>FACULTAD:</td>
+                <td>
+                  <input
+                    type="text"
+                    value={facultad}
+                    onChange={handleFacultadChange}
+                  />
+                </td>
+                <td>PROGRAMA:</td>
+                <td>
+                  <input
+                    type="text"
+                    value={programa}
+                    onChange={handleProgramaChange}
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
           <div className="solicitud-fecha">
             <span>Fecha:</span>
             <span>{new Date().toLocaleDateString()}</span>
@@ -71,7 +97,7 @@ function Solicitud() {
           <tbody>
             <tr>
               <td>
-                <input type="text" />
+                <input type="number" />
               </td>
               <td>
                 <input type="text" />
@@ -83,7 +109,7 @@ function Solicitud() {
                 <input type="text" />
               </td>
               <td>
-                <input type="text" />
+                <input type="number" />
               </td>
               <td>
                 <input type="text" />
@@ -96,10 +122,10 @@ function Solicitud() {
         <button type="submit">ENVIAR SOLICITUD</button>
         <button>LIMPIAR FORMULARIO</button>
         <button>VER SOLICITUDES</button>
-        <button>REGRESAR</button>
+        <button onClick={() => onUpdateState(false)}>REGRESAR</button>
       </div>
     </div>
   );
 }
 
-export default Solicitud;
+export default SolicitudHom;
