@@ -83,40 +83,38 @@ function SolicitudHom({onUpdateState}) {
         </form>
       </div>
       <div className="solicitud-tabla">
-        <table>
-          <thead>
-            <tr>
-              <th>CÓDIGO</th>
-              <th>NOMBRE MATERIA</th>
-              <th>NOMBRE PROGRAMA</th>
-              <th>PERIODO</th>
-              <th>CALIFICACIÓN</th>
-              <th>COMENTARIO</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <input type="number" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="number" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <form action="" method="POST">
+          <div className="rellenar-form">
+            <div>
+              <label>CÓDIGO</label>
+              <input type="number" name="txtCodigo"/>
+            </div>
+            <div>
+              <label>MATERIA</label>
+              <input type="text" name="txtMateria"/>
+            </div>
+            <div>
+              <label>PROGRAMA</label>
+              <input type="text" name="txtPrograma"/>
+            </div>
+            <div>
+              <label>PERIODO</label>
+              <input type="number" name="txtPeriodo"/>
+            </div>
+            <div>
+              <label>CALIFICAION</label>
+              <input type="number" name="txtCalificacion"/>
+            </div>
+            <div>
+              <label>COMENTARIO</label>
+              <input type="text" name="txtComentario"/>
+            </div>
+            <div>
+              <input type="submit" className="btn-agregar" name="agregar" value={"Agregar"}/>
+            </div>
+          </div>
+        </form>
+        <hr className="separador"/>
       </div>
       <div className="solicitud-buttons">
         <button type="submit">ENVIAR SOLICITUD</button>

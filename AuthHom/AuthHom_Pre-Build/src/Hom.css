@@ -77,27 +77,46 @@
 }
 
 .solicitud-tabla {
-  background-color: #bec5bc;
   padding: 10px;
-  border-radius: 10px;
   margin: 1.2rem;
   margin-top: 20px;
 }
 
-.solicitud-tabla table {
+.solicitud-tabla form {
   width: inherit;
   border-collapse: collapse;
   margin: 1.2rem;
 }
 
-.solicitud-tabla th,
-.solicitud-tabla td {
-  padding: 5px;
-  text-align: center;
+.rellenar-form {
+  display: flex;
 }
 
-.solicitud-tabla th {
-  color: #6c9a06;
+.rellenar-form  input {
+  display: flex;
+  margin: 0 10px 0 10px;
+}
+
+.rellenar-form label {
+  margin: 0 10px 0 10px;
+}
+
+.btn-agregar {
+  background-color: #0a351c;
+  color: #fff;
+  border-radius: 10px;
+  padding: 19px 15px;
+  cursor: pointer;
+}
+
+.btn-agregar:hover {
+  background-color: #6c9a06;
+}
+
+.separador {
+  width: 100%;
+  border-style: dashed;
+  color: rgb(47, 46, 46);
 }
 
 .solicitud-buttons {
