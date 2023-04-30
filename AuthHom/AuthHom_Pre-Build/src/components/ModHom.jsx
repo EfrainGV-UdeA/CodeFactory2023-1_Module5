@@ -42,6 +42,8 @@ function SolicitudHom({onUpdateState}) {
                 <td>NOMBRE:</td>
                 <td>
                   <input
+                    required
+                    placeholder="Nombre"
                     type="text"
                     value={nombre}
                     onChange={handleNombreChange}
@@ -50,6 +52,8 @@ function SolicitudHom({onUpdateState}) {
                 <td>CÉDULA:</td>
                 <td>
                   <input
+                    required
+                    placeholder="Cédula"
                     type="number"
                     value={cedula}
                     onChange={handleCedulaChange}
@@ -60,6 +64,8 @@ function SolicitudHom({onUpdateState}) {
                 <td>FACULTAD:</td>
                 <td>
                   <input
+                    required
+                    placeholder="Facultad"
                     type="text"
                     value={facultad}
                     onChange={handleFacultadChange}
@@ -68,6 +74,8 @@ function SolicitudHom({onUpdateState}) {
                 <td>PROGRAMA:</td>
                 <td>
                   <input
+                    required
+                    placeholder="Programa"
                     type="text"
                     value={programa}
                     onChange={handleProgramaChange}
@@ -86,32 +94,34 @@ function SolicitudHom({onUpdateState}) {
         <form action="" method="POST">
           <div className="rellenar-form">
             <div>
-              <label>CÓDIGO</label>
-              <input type="number" name="txtCodigo"/>
+              <label>CÓDIGO<span>*</span></label>
+              <input type="number" name="txtCodigo" required placeholder="Código"/>
             </div>
             <div>
-              <label>MATERIA</label>
-              <input type="text" name="txtMateria"/>
+              <label>MATERIA<span>*</span></label>
+              <input type="text" name="txtMateria" required placeholder="Nombre Materia"/>
             </div>
             <div>
-              <label>PROGRAMA</label>
-              <input type="text" name="txtPrograma"/>
+              <label>PROGRAMA<span>*</span></label>
+              <input type="text" name="txtPrograma" required placeholder="Nombre Programa"/>
+            </div>
+          </div>
+          <div className="rellenar-form">
+            <div>
+              <label>PERIODO<span>*</span></label>
+                <input type="number" name="txtPeriodo" required placeholder="Periodo, ej. 20231"/>
             </div>
             <div>
-              <label>PERIODO</label>
-              <input type="number" name="txtPeriodo"/>
-            </div>
-            <div>
-              <label>CALIFICAION</label>
-              <input type="number" name="txtCalificacion"/>
+              <label>CALIFICAIÓN<span>*</span></label>
+                <input type="number" name="txtCalificacion" required placeholder="Calificación, ej. 4.2"/>
             </div>
             <div>
               <label>COMENTARIO</label>
-              <input type="text" name="txtComentario"/>
+              <input type="text" name="txtComentario" required placeholder="Comentario"/>
             </div>
-            <div>
-              <input type="submit" className="btn-agregar" name="agregar" value={"Agregar"}/>
-            </div>
+          </div>
+          <div>
+            <input type="submit" className="btn-agregar" name="agregar" value={"Agregar"}/>
           </div>
         </form>
         <hr className="separador"/>
