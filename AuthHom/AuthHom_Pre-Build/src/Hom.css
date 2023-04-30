@@ -21,6 +21,7 @@
   text-align: center;
   color: #fff;
   width: 80;
+  font-size: 12px;
 }
 
 .solicitud-form {
@@ -35,16 +36,18 @@
 .solicitud-form h2 {
   background-color: #0a351c;
   color: #fff;
-  padding: 5px;
+  padding: 0.4%;
   border-radius: 5px;
   text-align: center;
   width: 50%;
   margin-left: 25%;
+  font-size: 18px;
 }
 
 .solicitud-form form {
   display: flex;
   flex-direction: column;
+  font-weight: bold;
 }
 
 .solicitud-form input {
@@ -81,9 +84,11 @@
   border-style: solid;
   border-radius: 20%;
   border-color: rgb(54, 53, 53);
+  border-width: 2px;
   padding: 0.2rem;
   margin-top: -0.2rem;
   margin-left: 0.3rem;
+  font-weight: lighter;
 }
 
 .solicitud-tabla {
@@ -100,23 +105,38 @@
 
 .rellenar-form {
   display: flex;
+  margin: 3%;
 }
 
 .rellenar-form  input {
   display: flex;
-  margin: 0 10px 0 10px;
+  justify-content: space-between;
+  margin: 0.6rem;
+  margin-left: 0;
+  width: 80%;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 .rellenar-form label {
   margin: 0 10px 0 10px;
+  color: #6c9a06;
+  font-weight: bold;
+}
+
+.rellenar-form span {
+  color: red;
 }
 
 .btn-agregar {
   background-color: #0a351c;
   color: #fff;
   border-radius: 10px;
-  padding: 19px 15px;
+  padding: 25%;
   cursor: pointer;
+  font-weight: 550;
 }
 
 .btn-agregar:hover {
