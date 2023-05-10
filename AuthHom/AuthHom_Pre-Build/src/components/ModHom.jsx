@@ -42,6 +42,8 @@ function SolicitudHom({onUpdateState}) {
                 <td>NOMBRE:</td>
                 <td>
                   <input
+                    required
+                    placeholder="Nombre"
                     type="text"
                     value={nombre}
                     onChange={handleNombreChange}
@@ -50,6 +52,8 @@ function SolicitudHom({onUpdateState}) {
                 <td>CÉDULA:</td>
                 <td>
                   <input
+                    required
+                    placeholder="Cédula"
                     type="number"
                     value={cedula}
                     onChange={handleCedulaChange}
@@ -60,6 +64,8 @@ function SolicitudHom({onUpdateState}) {
                 <td>FACULTAD:</td>
                 <td>
                   <input
+                    required
+                    placeholder="Facultad"
                     type="text"
                     value={facultad}
                     onChange={handleFacultadChange}
@@ -68,6 +74,8 @@ function SolicitudHom({onUpdateState}) {
                 <td>PROGRAMA:</td>
                 <td>
                   <input
+                    required
+                    placeholder="Programa"
                     type="text"
                     value={programa}
                     onChange={handleProgramaChange}
@@ -83,40 +91,40 @@ function SolicitudHom({onUpdateState}) {
         </form>
       </div>
       <div className="solicitud-tabla">
-        <table>
-          <thead>
-            <tr>
-              <th>CÓDIGO</th>
-              <th>NOMBRE MATERIA</th>
-              <th>NOMBRE PROGRAMA</th>
-              <th>PERIODO</th>
-              <th>CALIFICACIÓN</th>
-              <th>COMENTARIO</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <input type="number" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-              <td>
-                <input type="number" />
-              </td>
-              <td>
-                <input type="text" />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <form action="" method="POST">
+          <div className="rellenar-form">
+            <div>
+              <label>CÓDIGO<span>*</span></label>
+              <input type="number" name="txtCodigo" required placeholder="Código"/>
+            </div>
+            <div>
+              <label>MATERIA<span>*</span></label>
+              <input type="text" name="txtMateria" required placeholder="Nombre Materia"/>
+            </div>
+            <div>
+              <label>PROGRAMA<span>*</span></label>
+              <input type="text" name="txtPrograma" required placeholder="Nombre Programa"/>
+            </div>
+          </div>
+          <div className="rellenar-form">
+            <div>
+              <label>PERIODO<span>*</span></label>
+                <input type="number" name="txtPeriodo" required placeholder="Periodo, ej. 20231"/>
+            </div>
+            <div>
+              <label>CALIFICAIÓN<span>*</span></label>
+                <input type="number" name="txtCalificacion" required placeholder="Calificación, ej. 4.2"/>
+            </div>
+            <div>
+              <label>COMENTARIO</label>
+              <input type="text" name="txtComentario" required placeholder="Comentario"/>
+            </div>
+          </div>
+          <div>
+            <input type="submit" className="btn-agregar" name="agregar" value={"Agregar"}/>
+          </div>
+        </form>
+        <hr className="separador"/>
       </div>
       <div className="solicitud-buttons">
         <button type="submit">ENVIAR SOLICITUD</button>

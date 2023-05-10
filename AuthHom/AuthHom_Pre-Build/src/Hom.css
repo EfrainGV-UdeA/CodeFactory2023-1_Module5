@@ -8,7 +8,8 @@
   border-radius: 12px;
   margin: 1.2rem;
   height: calc(100% - 45vh);
-  max-width: 98%;
+  width: 98%;
+  max-width: 2000px;
   box-sizing: border-box;
   align-self: center;
 }
@@ -19,6 +20,8 @@
   padding: 0.5rem;
   text-align: center;
   color: #fff;
+  width: 80;
+  font-size: 12px;
 }
 
 .solicitud-form {
@@ -27,19 +30,24 @@
   background-color: #bec5bc;
   padding: 10px;
   border-radius: 10px;
+  width: 98%;
 }
 
 .solicitud-form h2 {
   background-color: #0a351c;
   color: #fff;
-  padding: 5px;
+  padding: 0.4%;
   border-radius: 5px;
   text-align: center;
+  width: 50%;
+  margin-left: 25%;
+  font-size: 18px;
 }
 
 .solicitud-form form {
   display: flex;
   flex-direction: column;
+  font-weight: bold;
 }
 
 .solicitud-form input {
@@ -48,6 +56,11 @@
   justify-content: space-between;
   margin: 0.8rem;
   margin-left: 0;
+  width: 70%;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 .solicitud-form label:first-child,
@@ -64,39 +77,76 @@
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
+  margin-left: 40%;
 }
 
 .solicitud-fecha span:last-child {
-  background-color: #fff;
-  border-radius: 50%;
-  border-color: black;
-  padding: 0.5rem;
-  margin-top: -5px;
+  border-style: solid;
+  border-radius: 20%;
+  border-color: rgb(54, 53, 53);
+  border-width: 2px;
+  padding: 0.2rem;
+  margin-top: -0.2rem;
   margin-left: 0.3rem;
+  font-weight: lighter;
 }
 
 .solicitud-tabla {
-  background-color: #bec5bc;
   padding: 10px;
-  border-radius: 10px;
   margin: 1.2rem;
   margin-top: 20px;
 }
 
-.solicitud-tabla table {
+.solicitud-tabla form {
   width: inherit;
   border-collapse: collapse;
   margin: 1.2rem;
 }
 
-.solicitud-tabla th,
-.solicitud-tabla td {
-  padding: 5px;
-  text-align: center;
+.rellenar-form {
+  display: flex;
+  margin: 3%;
 }
 
-.solicitud-tabla th {
+.rellenar-form  input {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.6rem;
+  margin-left: 0;
+  width: 80%;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.rellenar-form label {
+  margin: 0 10px 0 10px;
   color: #6c9a06;
+  font-weight: bold;
+}
+
+.rellenar-form span {
+  color: red;
+}
+
+.btn-agregar {
+  background-color: #0a351c;
+  color: #fff;
+  border-radius: 10px;
+  padding: 25%;
+  cursor: pointer;
+  font-weight: 550;
+}
+
+.btn-agregar:hover {
+  background-color: #6c9a06;
+}
+
+.separador {
+  width: 95%;
+  border-style: dashed;
+  color: rgb(47, 46, 46);
 }
 
 .solicitud-buttons {
